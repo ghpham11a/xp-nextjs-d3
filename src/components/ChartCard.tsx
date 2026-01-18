@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ChartCardProps {
@@ -9,18 +10,28 @@ interface ChartCardProps {
 export default function ChartCard({ id, name, description }: ChartCardProps) {
   return (
     <Link href={`/charts/${id}`}>
-      <div className="group border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-gray-900">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-            <ChartIcon type={id} />
-          </div>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-            {name}
-          </h2>
+      <div className="group border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all cursor-pointer bg-white dark:bg-gray-900">
+        <div className="relative h-40 bg-gray-100 dark:bg-gray-800">
+          <Image
+            src="/charts/treemap.jpg"
+            alt={`${name} preview`}
+            fill
+            className="object-cover"
+          />
         </div>
-        <p className="text-gray-600 dark:text-gray-400 text-sm">
-          {description}
-        </p>
+        <div className="p-5">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+              <ChartIcon type={id} />
+            </div>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              {name}
+            </h2>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            {description}
+          </p>
+        </div>
       </div>
     </Link>
   );
