@@ -5,3 +5,28 @@ export { default as ScatterPlot } from "./ScatterPlot";
 export { default as DonutChart } from "./DonutChart";
 export { default as AreaChart } from "./AreaChart";
 export { default as TreemapChart, type TreeNode } from "./TreemapChart";
+
+// Animation charts
+export { default as BarChartRace, type BarRaceDataFrame } from "./BarChartRace";
+export { default as SortableBarChart } from "./SortableBarChart";
+export { default as HierarchicalBarChart, type HierarchicalBarNode } from "./HierarchicalBarChart";
+export { default as StackedToGroupedBars, type StackedGroupedData } from "./StackedToGroupedBars";
+export { default as StreamgraphTransitions, type StreamgraphData } from "./StreamgraphTransitions";
+export { default as ConnectedScatterplot, type ConnectedScatterData } from "./ConnectedScatterplot";
+export { default as ScatterplotTour, type ScatterTourPoint, type ScatterTourStep } from "./ScatterplotTour";
+export { default as AnimatedTreemap, type AnimatedTreemapFrame } from "./AnimatedTreemap";
+export { default as ZoomableTreemap, type ZoomableTreemapNode } from "./ZoomableTreemap";
+export { default as ZoomableCirclePacking, type CirclePackingNode } from "./ZoomableCirclePacking";
+export { default as ZoomableSunburst, type SunburstNode } from "./ZoomableSunburst";
+export { default as ZoomableIcicle, type IcicleNode } from "./ZoomableIcicle";
+export { default as CollapsibleTree, type CollapsibleTreeNode } from "./CollapsibleTree";
+export { default as ArcTween } from "./ArcTween";
+export { default as PieChartUpdate, type PieUpdateData } from "./PieChartUpdate";
+export { default as TemporalForceGraph, type ForceGraphNode, type ForceGraphLink, type TemporalGraphFrame } from "./TemporalForceGraph";
+export { default as SmoothZooming, type ZoomPoint } from "./SmoothZooming";
+export { default as ZoomToBoundingBox, type BoundingBoxRegion } from "./ZoomToBoundingBox";
+export { default as WorldTour, type WorldTourCountry } from "./WorldTour";
+export { default as ProjectionTransition } from "./ProjectionTransition";
+export { default as GrowthMap, type GrowthMapLocation } from "./GrowthMap";
+export { default as WealthHealthNations, type NationData, type WealthHealthFrame } from "./WealthHealthNations";
+export { default as PopulationPyramid, type PopulationAgeGroup, type PopulationFrame } from "./PopulationPyramid";
